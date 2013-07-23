@@ -145,15 +145,6 @@ html(lang="en")
               more than one)
 
           section
-            h3 it's easy!
-            pre.fragment.fade-in.
-              d3.select('body').selectAll('.box').data(random(), function(d){return d.city;}).call(function(s){s.style('border', '1px solid black').transition().duration(duration).style('top', function(d, i){return 50+i*30;}).transition().duration(2*duration).style('width', function(d){ return d.value*200; });}).call(function(s){s.enter().append('div').attr('class', 'box').text(function(d){return d.city;}).style('top', function(d, i){return 50+i*30;}).transition().duration(duration).delay().style('width', function(d){return d.value*200;});}).call(function(s){s.exit().transition().duration(duration).style('top', 2000).remove();})
-            p.fragment
-              you just need this and
-            p.fragment
-              a(href="http://danse.github.io/d3-playground/") a page with d3
-
-          section
             h3 the heart of d3
             p selectAll, enter, exit
             ul
@@ -185,16 +176,7 @@ html(lang="en")
               the d3 interface
 
           section
-            h3 d3 sisters
-            p
-              a(href="http://bost.ocks.org/mike/chart/") d3 reusable graph format
-            ul
-              li d3 plugins
-              li nvd3
-              li
-                a(href="https://github.com/trifacta/vega") vega
-              li
-                a(href="http://square.github.io/crossfilter/") crossfilter
+            p but this is just a tile in the mosaic
 
         section
 
@@ -203,14 +185,14 @@ html(lang="en")
             ul
               li.fragment interdisciplinary
               ul
-                li.fragment programming
-                li.fragment design
                 li.fragment data analysis
+                li.fragment design
+                li.fragment programming
               li.fragment innovative
               ul
-                li.fragment technology
-                li.fragment concept
                 li.fragment purpose
+                li.fragment concepts
+                li.fragment technology
               li.fragment big
               ul
                 li.fragment just check the d3 doc
@@ -245,6 +227,7 @@ html(lang="en")
           section
             h4 What do we need to know?
             ul
+              li aesthetics
               li command line tools
               li web development
               li data sources
@@ -282,9 +265,9 @@ html(lang="en")
 
             h4 A little exercise
             p.fragment
-              a(href="https://github.com/Data-Visualization-Berlin/cardinals") Eight Cardinal points for Infovis
-            p.fragment
-              somebody wants to style it, by the way?
+              a(href="https://github.com/Data-Visualization-Berlin/cardinals") Infovis Eight Cardinal Points
+            p.fragment to get oriented
+            p.fragment somebody wants to style it, by the way?
 
           section
 
