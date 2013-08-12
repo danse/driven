@@ -1,0 +1,24 @@
+- regression image - 
+
+write  tests  before
+
+write the tests
+test the tests: run the tests, they should fail
+    and fail in the right way
+develop
+run
+develop
+run
+
+also several test / dev cycles could happen, just keep in mind to revert the
+traditional order
+
+- towards declarative
+- towards literate
+
+bug -> fix -- no
+bug -> test -> fix -- yes
+
+advantage? regression
+
+- cross fire -
