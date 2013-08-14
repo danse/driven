@@ -29,7 +29,8 @@ html(lang="en")
     //- <![endif]-->
 
     title
-      Data Visualization Berlin
+      About test driven development
+
   body
     div(class="reveal")
       div(class="slides")
@@ -37,242 +38,78 @@ html(lang="en")
         section
 
           section
-            h3 Data Visualization Berlin
-            h1.fragment Welcome!
 
-          section(data-background="data.png", data-state="white")
-            h2 what is it all about
+            why tests?
 
           section
-            p that's the buzz, baby
-            p.fragment and there is nothing you can do about it ...
+
+            //- regression image - 
+
+            regression tests relief you code by a task: to be similar to itself
+
+        section
+            
 
           section
-            p but data are abstract
-            p.fragment while we human beings come from a world of sensible things
+
+            the test driven principle
 
           section
-            h3 sense making
-            ul.fragment.fade-in
-              li Smell
-              li Taste
-              li Hearing
-              li Touch
-              li Sight
 
-          section
-            h3 Hearing - data auralization
-            a(href="http://vimeo.com/23965023") listening to the Dow
+            everything is based on an extremely simple principle:
 
-          section(data-background="anfischer_indizes_2.jpg", data-state="white")
-            h3 Touch - data sculptures?
+            write  tests  before
+
+            write the tests
+            test the tests: run the tests, they should fail
+                and fail in the right way
+            develop
+            run
+            develop
+            run
+
+        section
             
           section
-            h3 Sight - let's keep it simple
-            a(href="http://www.dashingd3js.com/why-data-visualizations") Anscombe's Quartet
+            
+            wider impact
 
           section
-            h3 but time has elapsed...
-            h4.fragment the media is different
-            p.fragment and it offers a small, disrupting feature
-            .fragment
-              h2.fragment.fade-out crappy standards
-            .fragment
-              p.fragment.highlight-blue interactivity
-            ul
-              li.fragment
-                a(href="http://mbostock.github.io/d3/talk/20111116/iris-splom.html").
-                  brushing
-              li.fragment linked views
-              li.fragment something we still don't imagine
-            p.fragment this will be a design problem, be aware
 
-          section
-            h3
-              a(href="https://github.com/mbostock/d3/wiki/Gallery").
-                examples
+            --
+                important benefit: "what do we want"? first of all
+            --
+            --
 
-            ul
-              li
-                a(href="http://www.jasondavies.com/parallel-sets/") parallel sets
-              li
-                a(href="http://bl.ocks.org/mbostock/4062045") force directed
-              li
-                a(href="http://bl.ocks.org/mbostock/4060954") stream graph
-              li
-                a(href="http://bl.ocks.org/mbostock/4063582") tree map
-              li
-                a(href="http://mbostock.github.io/d3/talk/20111018/tree.html") collapsible tree
-              li
-                a(href="http://mbostock.github.io/d3/talk/20111116/force-collapsible.html") collapsible force layout
-              li
-                a(href="http://mbostock.github.io/d3/talk/20111116/bundle.html") hierarchical edge bundling
+            also several test / dev cycles could happen, just keep in mind to revert the
+            traditional order
 
-          section
-            h3
-                a(href="food-table.csv") tables
-                | - versus -
-                a(href="http://exposedata.com/parallel/") strokes
+            - towards declarative
+            - towards literate
+
+            bug -> fix -- no
+            bug -> test -> fix -- yes
 
         section
-
+            
           section
-            h3 d3
-
-
-          section
-            h3 which kind of tool is d3?
-            a(href="http://bl.ocks.org/mbostock/1256572") show reel
-            p.fragment it's a flexible tool
-
-          section
-            h3 which kind of tool is d3?
-            p.
-
-              usability research effort from Stanford and Berkeley
-              visualization groups
-
-            p.fragment for example ...
-
-            p.fragment.roll-in
-              a(href="http://vis.berkeley.edu/papers/animated_transitions/") vis.berkeley paper
-              | &rarr;
-              a(href="http://bost.ocks.org/mike/constancy/") object constancy
-
-            p.fragment.
-
-              is the result of the research effort of a whole laboratory (and
-              more than one)
-
-          section
-            h3 the heart of d3
-            p selectAll, enter, exit
-            ul
-              li
-                a(href="http://mbostock.github.io/d3/tutorial/circle.html").
-                  three little circles
-              li
-                a(href="http://bost.ocks.org/mike/join/").
-                  thinking with joins
-              li
-                a(href="http://bl.ocks.org/mbostock/3808234").
-                  general update pattern (letters)
-              li
-                a(href="http://bost.ocks.org/mike/selection/").
-                  to deepen selections
-
-          section
-            h3 how hard can it get?
-            a(href="http://mbostock.github.io/d3/talk/20111018/collision.html").
-              anatomy of a force chart
-            p
-              small
-                a(href="http://bl.ocks.org/mbostock/1804919").
-                  reference for custom gravity
-
-          section
-            h3 it's an universe
-            a(href="https://github.com/mbostock/d3/wiki/API-Reference").fragment.
-              the d3 interface
-
-          section
-            p but this is just a tile in the mosaic
-
-        section
-
-          section
-            h3 it's complicated
-            ul
-              li.fragment interdisciplinary
-              ul
-                li.fragment data analysis
-                li.fragment design
-                li.fragment programming
-              li.fragment innovative
-              ul
-                li.fragment purpose
-                li.fragment concepts
-                li.fragment technology
-              li.fragment big
-              ul
-                li.fragment just check the d3 doc
-            p.fragment developing this is like doing research...
-            p.fragment ... in an interdisciplinary field
-
-          section
-            h4 thus, some kind of cooperation would help
-            h3.fragment Berlin visionaries
-            ul
-              li.fragment data visualization group, London
-                p.fragment &mdash; 16 months ago &mdash; ~780 visualizers
-              li.fragment data visualization group, Berlin
-                p.fragment &mdash; 1 month ago &mdash; ~140 visionaries
-                p.fragment Not bad ...
-                p.fragment But we need an icon :D
-
-          section
-            h3 Which kind of meetup?
-            p.fragment Linux User Group
-              ul
-                li.fragment everyone has his laptop
-                li.fragment learn by doing
-                li.fragment this is the only mean to tear down many technological barriers straight away
-                li.fragment what is the equivalent in our case?
-            p.fragment D3 User Group?
-              ul.fragment
-                li flare
-                li protovis
-                li processing
-
-          section
-            h4 What do we need to know?
-            ul
-              li aesthetics
-              li command line tools
-              li web development
-              li data sources
-              li processing services
-              li statistics
-              li usability references
-              li query languages
-              li much more...
-            p.fragment yep, related to Hacks/Hackers, but still quite different
-
-          section
-            h3 How can a group of ...
-            p.fragment busy
-            p.fragment people
-            p.fragment with different backgrounds
-            p.fragment different dress codes :D
-            p.fragment and also talking different languages, by the way
-            p.fragment come up with some useful content?
-
-          section
-            h3 All will be possible, with the powerful tools we all know!
-            ul
-              li.fragment beer
-              li.fragment wikipedia
-              li.fragment stack overflow
-              li.fragment github
-              li.fragment github
-              li.fragment github...
-
-            p.fragment uhm, suggestions maybe?
-            p.fragment.
-              either we find the right platforms, or we surrender to powerpoint
+            
+            tips from experience
 
           section
 
-            h4 A little exercise
-            p.fragment
-              a(href="https://github.com/Data-Visualization-Berlin/cardinals") Infovis Eight Cardinal Points
-            p.fragment to get oriented
-            p.fragment somebody wants to style it, by the way?
+            for the lazy:
+
+            expect('')
+
+            let the tests write themselves
+
+            advantage? regression
+
 
           section
-
-            h3 thanks !
-
+            
+            - cross fire -
 
     script(src="lib/js/head.min.js")
     script(src="js/reveal.min.js")
