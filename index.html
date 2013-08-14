@@ -5,18 +5,39 @@
 </style><!-- If the query includes 'print-pdf', use the PDF print sheet--><script>document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 </script><title><About>test driven development</About></title></head><body><div class="reveal"><div class="slides"><section><section><h1>Test driven development</h1></section></section><section><section><h3>why tests?</h3></section><section><p>normal tests, written after the development, have mainly one
 purpose
-</p><h3 class="fragment">regression</h3><p class="fragment">regression tests relief you code by a task: to be similar to
+</p><h3 class="fragment">regression</h3><img src="devolution.png" class="fragment"><p class="fragment">regression tests relief you code by a task: to be similar to
 itself
 </p><p class="fragment">thus, they enable the code to evolve, without too many worries
 </p></section><section><p>but tests are terribly boring</p><p class="fragment">and you will never find the time for them</p></section><section><p>i hate boring things</p><p class="fragment">but from May to now, being under pressure, i was able to keep
-developing and at the same time writing 222 test specifications
+developing and at the same time writing ~200 test specifications
 </p><p class="fragment">how?</p></section></section><section><section><h2>the principle</h2><p class="fragment">everything is based on an extremely simple principle</p></section><section><h2 class="fragment">test</h2><h2 class="fragment">before</h2></section><section><ul><li>write the tests</li><li class="fragment">test the tests: run the tests, they should fail and fail in the
 right way
-</li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test...</li></ul><p class="fragment">your tests will tell you when you're done</p><p class="fragment">in a very zen way, your end will meet your principle :D</p></section><section><p>also several test / dev cycles could happen, just keep in mind to
+</li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test...</li></ul><p class="fragment">your tests will tell you when you're done</p><p class="fragment">in a very zen way, your end will meet your principle :D</p><img src="yinyang.gif" class="fragment"></section><section><p>also several test / dev cycles could happen, just keep in mind to
 revert the traditional order
 </p></section><section><p>every discovered bug, should be handled as a new feature
 </p><p class="fragment"><p>bug -> fix -- no</p><p>bug -> test -> fix -- yes</p></p><p class="fragment">that's the only way to slowly eliminate regression problems
-</p></section></section><section><section><h2>the wider impact</h2></section><section><p>as we said, the principle is simple:</p><h5 class="fragment">write the tests</h5><p class="fragment">before.</p><p class="fragment">so, the first thing we get, are tests</p></section><section><p><important>benefit: "what do we want"? first of all</important></p><ul class="fragment"><li>towards declarative</li><li>towards literate</li></ul></section><section><p>final consideration, for those with an analytical mind</p><p class="fragment">it's not bullet-proof</p><p class="fragment">but it helps, a lot</p></section></section><section><section><h2>tips from experience</h2></section><section><p>for the lazy:</p><p class="fragment">expect('')</p><p class="fragment">let the tests write themselves</p><p class="fragment">advantage? regression</p></section><section><p>cross fire</p></section></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>// Full list of configuration options available here:
+</p></section></section><section><section><h2>the wider impact</h2></section><section><p>as we said, the principle is simple:</p><h5 class="fragment">write the tests</h5><p class="fragment">before.</p><p class="fragment">so, the first thing we get, are tests</p></section><section><p>"what do i want"? first of all
+</p><ul class="fragment"><li>towards declarative</li><li>towards literate</li></ul><br><br><pre style="font-size:23px" class="fragment">describe('my component', function() {
+  it('goes to detail after click on the item', function() {
+    spyOn(history.newPage);
+    this.component.select('$item').eq(0).click();
+    expect(history.newPage)
+      .toHaveBeenCalledWith({
+        page: 'detail',
+        item: 3243
+      });
+  });
+});
+</pre><p class="fragment">this is the only way i know in order to think outside-in, from
+the very beginning
+</p></section><section><p>this process can lead you to always better interfaces, or not
+</p><p class="fragment">(that means, to better testing logic instead)
+</p><br><br><br><pre style="font-size:24px">expect(node.visible).toBe(true);
+
+expect(node).toBeVisible();
+</pre></section><section><p>final consideration, for those with an analytical mind</p><p class="fragment">it's not bullet-proof</p><img src="spider.jpg" class="fragment"></section><section><img src="bug.jpg"><p class="fragment">but it helps, a lot</p></section></section><section><section><h2>tips from experience</h2></section><section><p>for the lazy:</p><p class="fragment">expect('')</p><p class="fragment">let the tests write themselves</p><p class="fragment">advantage? regression</p></section><section data-background="doublefire.jpg" data-background-size="cover"><h3>cross fire</h3><p class="fragment"><p>tackle the same problem</p><p>from different angles</p></p></section></section><section><section><h2>questions?</h2><p class="fragment">if you don't have questions, why aren't you yet developing with
+test driven?
+</p></section></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>// Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
   controls: true,

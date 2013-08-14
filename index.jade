@@ -56,7 +56,7 @@ html(lang="en")
 
             h3.fragment regression
 
-            //- regression image - 
+            img.fragment(src="devolution.png")
 
             p.fragment.
 
@@ -80,7 +80,7 @@ html(lang="en")
             p.fragment.
 
               but from May to now, being under pressure, i was able to keep
-              developing and at the same time writing 222 test specifications
+              developing and at the same time writing ~200 test specifications
 
             p.fragment how?
 
@@ -116,6 +116,7 @@ html(lang="en")
 
             p.fragment your tests will tell you when you're done
             p.fragment in a very zen way, your end will meet your principle :D
+            img(src="yinyang.gif").fragment
 
           section
 
@@ -157,13 +158,55 @@ html(lang="en")
 
           section
 
-            p
+            p.
 
-              important benefit: "what do we want"? first of all
+              "what do i want"? first of all
 
             ul.fragment
               li towards declarative
               li towards literate
+
+            br
+            br
+
+            pre(style="font-size:23px").fragment.
+            
+              describe('my component', function() {
+                it('goes to detail after click on the item', function() {
+                  spyOn(history.newPage);
+                  this.component.select('$item').eq(0).click();
+                  expect(history.newPage)
+                    .toHaveBeenCalledWith({
+                      page: 'detail',
+                      item: 3243
+                    });
+                });
+              });
+
+            p.fragment.
+            
+              this is the only way i know in order to think outside-in, from
+              the very beginning
+
+          section
+
+            p.
+            
+              this process can lead you to always better interfaces, or not
+
+            p.fragment.
+
+              (that means, to better testing logic instead)
+
+            br
+            br
+            br
+
+            pre(style="font-size:24px").
+
+             expect(node.visible).toBe(true);
+
+             expect(node).toBeVisible();
 
           section
 
@@ -171,7 +214,11 @@ html(lang="en")
 
             p.fragment it's not bullet-proof
 
-            //- spider image
+            img.fragment(src="spider.jpg")
+
+          section
+
+            img(src="bug.jpg")
 
             p.fragment but it helps, a lot
 
@@ -192,11 +239,26 @@ html(lang="en")
             p.fragment advantage? regression
 
 
-          section
+          section(data-background="doublefire.jpg", data-background-size="cover")
             
-            p cross fire
+            h3 cross fire
 
-            //- cross fire image -
+            p.fragment
+
+              p tackle the same problem
+              
+              p from different angles
+
+        section
+
+          section
+
+            h2 questions?
+
+            p.fragment.
+            
+              if you don't have questions, why aren't you yet developing with
+              test driven?
 
     script(src="lib/js/head.min.js")
     script(src="js/reveal.min.js")
