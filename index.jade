@@ -9,7 +9,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
 
     link(rel="stylesheet", href="css/reveal.min.css")
-    link(rel="stylesheet", href="css/theme/sky.css", id="theme")
+    link(rel="stylesheet", href="css/theme/night.css", id="theme")
 
     // For syntax highlighting
     link(rel="stylesheet", href="lib/css/zenburn.css")
@@ -39,77 +39,164 @@ html(lang="en")
 
           section
 
-            why tests?
+            h1 Test driven development
+
+        section
 
           section
+
+            h3 why tests?
+
+          section
+
+            p.
+            
+              normal tests, written after the development, have mainly one
+              purpose
+
+            h3.fragment regression
 
             //- regression image - 
 
-            regression tests relief you code by a task: to be similar to itself
+            p.fragment.
+
+              regression tests relief you code by a task: to be similar to
+              itself
+
+            p.fragment.
+
+              thus, they enable the code to evolve, without too many worries
+
+          section
+
+            p but tests are terribly boring
+
+            p.fragment and you will never find the time for them
+
+          section
+
+            p i hate boring things
+
+            p.fragment.
+
+              but from May to now, being under pressure, i was able to keep
+              developing and at the same time writing 222 test specifications
+
+            p.fragment how?
+
+        section
+
+          section
+
+            h2 the principle
+
+            p.fragment everything is based on an extremely simple principle
+
+          section
+
+            h2.fragment test
+            h2.fragment before
+
+          section
+
+            ul
+
+              li write the tests
+              li.fragment.
+              
+                test the tests: run the tests, they should fail and fail in the
+                right way
+
+              li.fragment develop
+              li.fragment test
+              li.fragment develop
+              li.fragment test
+              li.fragment develop
+              li.fragment test...
+
+            p.fragment your tests will tell you when you're done
+            p.fragment in a very zen way, your end will meet your principle :D
+
+          section
+
+            p.
+
+              also several test / dev cycles could happen, just keep in mind to
+              revert the traditional order
+
+          section
+
+            p.
+
+              every discovered bug, should be handled as a new feature
+
+            p.fragment
+
+              p bug -> fix -- no
+              p bug -> test -> fix -- yes
+
+            p.fragment.
+            
+              that's the only way to slowly eliminate regression problems
 
         section
             
+          section
+            
+            h2 the wider impact
 
           section
 
-            the test driven principle
+            p as we said, the principle is simple:
+
+            h5.fragment write the tests
+
+            p.fragment before.
+
+            p.fragment so, the first thing we get, are tests
 
           section
 
-            everything is based on an extremely simple principle:
+            p
 
-            write  tests  before
+              important benefit: "what do we want"? first of all
 
-            write the tests
-            test the tests: run the tests, they should fail
-                and fail in the right way
-            develop
-            run
-            develop
-            run
+            ul.fragment
+              li towards declarative
+              li towards literate
+
+          section
+
+            p final consideration, for those with an analytical mind
+
+            p.fragment it's not bullet-proof
+
+            //- spider image
+
+            p.fragment but it helps, a lot
 
         section
             
           section
             
-            wider impact
+            h2 tips from experience
 
           section
 
-            --
-                important benefit: "what do we want"? first of all
-            --
-            --
+            p for the lazy:
 
-            also several test / dev cycles could happen, just keep in mind to revert the
-            traditional order
+            p.fragment expect('')
 
-            - towards declarative
-            - towards literate
+            p.fragment let the tests write themselves
 
-            bug -> fix -- no
-            bug -> test -> fix -- yes
-
-        section
-            
-          section
-            
-            tips from experience
-
-          section
-
-            for the lazy:
-
-            expect('')
-
-            let the tests write themselves
-
-            advantage? regression
+            p.fragment advantage? regression
 
 
           section
             
-            - cross fire -
+            p cross fire
+
+            //- cross fire image -
 
     script(src="lib/js/head.min.js")
     script(src="js/reveal.min.js")
