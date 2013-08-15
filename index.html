@@ -10,7 +10,7 @@ itself
 </p><p class="fragment">thus, they enable the code to evolve, without too many worries
 </p></section><section><p>but tests are terribly boring</p><p class="fragment">the typical test is just "<i>stating the obvious</i>"</p><p class="fragment">and you will never find the time for them</p><i class="fragment">increase the test coverage? </i><i class="fragment">get more people to do that manually</i></section><section><p>i hate boring things</p><p class="fragment">and we where quite stressed, in the frontend</p><p class="fragment">but from May to now, i was able to keep developing and at the
 same time writing ~200 test specifications
-</p><p class="fragment">and they really helped me</p><p class="fragment">how to do that?</p></section></section><section><section><h2>the principle</h2><p class="fragment">everything is based on an extremely simple principle</p></section><section><h2 class="fragment">test</h2><h2 class="fragment">before</h2></section><section><ul><li>write the tests</li><li class="fragment">test the tests: run the tests, they should fail and fail in the
+</p><p class="fragment">and they really helped me</p><p class="fragment">how to do that?</p></section></section><section><section><h2>the principle</h2><p class="fragment">everything is based on an extremely simple principle</p></section><section><h1 class="fragment">test</h1><h1 class="fragment">before</h1></section><section><ul><li>write the tests</li><li class="fragment">test the tests: run the tests, they should fail and fail in the
 right way
 </li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test</li><li class="fragment">develop</li><li class="fragment">test...</li></ul><p class="fragment">your tests will tell you when you're done</p><p class="fragment">in a very zen way, your end will meet your principle :D</p><img src="yinyang.gif" class="fragment"></section><section><p>also several test / dev cycles could happen, just keep in mind to
 revert the traditional order
@@ -48,7 +48,10 @@ expect(node).toBeVisible();
   expect($value.text()).toBe('34.67%');
 });
 </pre><p class="fragment">yes, tests are supposed to grow, while code is supposed to shrink
-</p><p class="fragment">at some extent</p></section><section data-background="doublefire.jpg" data-background-size="cover"><h3>cross fire</h3><p class="fragment"><p>tackle the same problem</p><p>from different angles</p></p></section></section><section><section><h2>questions?</h2><p class="fragment">if you don't have questions, why aren't you yet developing with
+</p><p class="fragment">at some extent</p></section><section data-background="doublefire.jpg" data-background-size="cover"><h3>cross fire</h3><p class="fragment"><p>tackle the same problem</p><p>from different angles</p></p></section><section><h4>infrastructural reforms</h4><br><p class="fragment">from my experience, in order to switch from a normal trial and
+error process to a test driven one, an <b>initial development effort </b>is needed.</p><br><br><p class="fragment">this effort is usually <b>quite small </b>, requiring one or two days.
+still you may feel quite unconfortable with your initial testing
+tools. convenience will come with time</p></section></section><section><section><h2>questions?</h2><p class="fragment">if you don't have questions, why aren't you yet developing with
 test driven?
 </p></section></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>// Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
