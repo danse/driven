@@ -71,18 +71,31 @@ html(lang="en")
 
             p but tests are terribly boring
 
+            p.fragment
+            
+              |the typical test is just "
+              i stating the obvious
+              |"
+
             p.fragment and you will never find the time for them
+
+            i.fragment increase the test coverage? 
+            i.fragment get more people to do that manually
 
           section
 
             p i hate boring things
 
+            p.fragment and we where quite stressed, in the frontend
+
             p.fragment.
 
-              but from May to now, being under pressure, i was able to keep
-              developing and at the same time writing ~200 test specifications
+              but from May to now, i was able to keep developing and at the
+              same time writing ~200 test specifications
+            
+            p.fragment and they really helped me
 
-            p.fragment how?
+            p.fragment how to do that?
 
         section
 
@@ -150,9 +163,7 @@ html(lang="en")
 
             p as we said, the principle is simple:
 
-            h5.fragment write the tests
-
-            p.fragment before.
+            h5.fragment tests before
 
             p.fragment so, the first thing we get, are tests
 
@@ -238,6 +249,30 @@ html(lang="en")
 
             p.fragment advantage? regression
 
+          section
+
+            h3 grow in details when you need them
+
+            pre(style="font-size:24px").
+
+              it('shows the correct value', function() {
+                var $value = this.component.select('$value');
+                expect(raw in this.component.data).toBe(true);
+                expect(this.component.lastTemplateInput.raw)
+                  .toBe(0.3476);
+                expect(this.component.format(0.3476))
+                  .toBe('34.76%');
+                expect(this.component.lastTemplateInput.formatted)
+                  .toBe('34.76%');
+                expect($value.length).toBe(1);
+                expect($value.text()).toBe('34.67%');
+              });
+
+            p.fragment.
+            
+              yes, tests are supposed to grow, while code is supposed to shrink
+
+            p.fragment at some extent
 
           section(data-background="doublefire.jpg", data-background-size="cover")
             
